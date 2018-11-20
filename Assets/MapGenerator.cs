@@ -9,10 +9,10 @@ public class MapGenerator : MonoBehaviour {
     public int height;
 
     public string seed;
-    public bool useRandomSeed;
+    public bool useRandomSeed = true;
 
     [Range(0,100)]
-    public int randomFillPercent;
+    public int randomFillPercent = 47;
 
     int[,] map;
 
