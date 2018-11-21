@@ -17,13 +17,13 @@ public class MapGenerator : MonoBehaviour {
     int[,] map;
 
     void Start() {
-        GenerateMap();
+        // GenerateMap();
     }
 
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            GenerateMap();
-        }
+        // if (Input.GetMouseButtonDown(0)) {
+        //     GenerateMap();
+        // }
     }
 
     void GenerateMap() {

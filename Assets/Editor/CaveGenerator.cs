@@ -5,6 +5,7 @@ using System.Collections;
 public class CaveGenerator : EditorWindow {
 	int width;
 	int height;
+	bool isCreatingCave;
 
 	[MenuItem ("Window/Cave Generator")]
 
@@ -17,5 +18,13 @@ public class CaveGenerator : EditorWindow {
 
 		width = (int) EditorGUILayout.Slider(width, 0, 1000);
 		height = (int) EditorGUILayout.Slider(height, 0, 1000);
+
+		isCreatingCave = EditorGUILayout.DropdownButton(new GUIContent("Create Cave"), new FocusType());
     }
-}
+
+	void Update() {
+		if (isCreatingCave) { // Actually create a cave!
+			// MapGenerator.GenerateMap(); // TODO Modify this code to work in a static context or bring it into this file
+		}
+	}
+ }
