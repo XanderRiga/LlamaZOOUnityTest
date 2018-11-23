@@ -283,7 +283,7 @@ public class MapGenerator : MonoBehaviour {
 
 
     void RandomFillMap() {
-        System.Random pseudoRandom = new System.Random(Time.time.ToString().GetHashCode());
+        System.Random pseudoRandom = new System.Random();
 
         for (int x = 0; x < width; x ++) {
             for (int y = 0; y < height; y ++) {
