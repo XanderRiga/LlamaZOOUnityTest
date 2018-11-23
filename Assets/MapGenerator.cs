@@ -7,6 +7,7 @@ public class MapGenerator : MonoBehaviour {
 
     private int width = 100;
     private int height = 100;
+    System.Random pseudoRandom = new System.Random();
 
     [Range(0,100)]
     private int randomFillPercent = 47;
@@ -283,8 +284,6 @@ public class MapGenerator : MonoBehaviour {
 
 
     void RandomFillMap() {
-        System.Random pseudoRandom = new System.Random();
-
         for (int x = 0; x < width; x ++) {
             for (int y = 0; y < height; y ++) {
                 if (x == 0 || x == width-1 || y == 0 || y == height -1) {

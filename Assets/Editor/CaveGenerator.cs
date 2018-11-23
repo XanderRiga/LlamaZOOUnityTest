@@ -12,8 +12,17 @@ public class CaveGenerator : ScriptableWizard {
 	}
 
 	void OnWizardCreate() {
+		GameObject currentMap = GameObject.Find("Map");
+		GameObject currentGround = GameObject.Find("Ground");
+
+		if (currentMap != null && currentGround != null) {
+			Destroy(currentMap);
+			Destroy(currentGround);
+		}
 		GameObject caveGO = (GameObject)Instantiate(Resources.Load("Map"));
+		caveGO.name = "Map";
 		GameObject groundGO = (GameObject)Instantiate(Resources.Load("Ground"));
+		groundGO.name = "Ground";
 	}
 
 	void OnWizardUpdate() {
